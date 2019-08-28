@@ -1,0 +1,112 @@
+# github.com/BurntSushi/toml v0.3.1
+github.com/BurntSushi/toml
+# github.com/coreos/etcd v3.3.13+incompatible
+github.com/coreos/etcd/auth/authpb
+github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes
+github.com/coreos/etcd/etcdserver/etcdserverpb
+github.com/coreos/etcd/mvcc/mvccpb
+github.com/coreos/etcd/pkg/types
+# github.com/davecgh/go-spew v1.1.1
+github.com/davecgh/go-spew/spew
+# github.com/dgrijalva/jwt-go v3.2.0+incompatible
+github.com/dgrijalva/jwt-go
+# github.com/gogo/protobuf v1.2.1
+github.com/gogo/protobuf/gogoproto
+github.com/gogo/protobuf/proto
+github.com/gogo/protobuf/protoc-gen-gogo/descriptor
+# github.com/golang/protobuf v1.3.1
+github.com/golang/protobuf/proto
+github.com/golang/protobuf/ptypes
+github.com/golang/protobuf/ptypes/any
+github.com/golang/protobuf/ptypes/duration
+github.com/golang/protobuf/ptypes/timestamp
+# github.com/google/uuid v1.1.1
+github.com/google/uuid
+# github.com/jinzhu/configor v1.0.0
+github.com/jinzhu/configor
+# github.com/konsorten/go-windows-terminal-sequences v1.0.1
+github.com/konsorten/go-windows-terminal-sequences
+# github.com/labstack/echo v3.3.10+incompatible
+github.com/labstack/echo
+github.com/labstack/echo/middleware
+# github.com/labstack/gommon v0.2.8
+github.com/labstack/gommon/color
+github.com/labstack/gommon/log
+github.com/labstack/gommon/bytes
+github.com/labstack/gommon/random
+# github.com/magiconair/properties v1.8.1
+github.com/magiconair/properties
+# github.com/mattn/go-colorable v0.1.1
+github.com/mattn/go-colorable
+# github.com/mattn/go-isatty v0.0.7
+github.com/mattn/go-isatty
+# github.com/pmezard/go-difflib v1.0.0
+github.com/pmezard/go-difflib/difflib
+# github.com/satori/go.uuid v1.2.0
+github.com/satori/go.uuid
+# github.com/sirupsen/logrus v1.4.2
+github.com/sirupsen/logrus
+# github.com/stretchr/testify v1.3.0
+github.com/stretchr/testify/assert
+# github.com/valyala/bytebufferpool v1.0.0
+github.com/valyala/bytebufferpool
+# github.com/valyala/fasttemplate v1.0.1
+github.com/valyala/fasttemplate
+# go.etcd.io/etcd v3.3.13+incompatible
+go.etcd.io/etcd/clientv3
+# golang.org/x/crypto v0.0.0-20190424203555-c05e17bb3b2d
+golang.org/x/crypto/acme/autocert
+golang.org/x/crypto/acme
+# golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3
+golang.org/x/net/context
+golang.org/x/net/trace
+golang.org/x/net/idna
+golang.org/x/net/internal/timeseries
+golang.org/x/net/http2
+golang.org/x/net/http2/hpack
+golang.org/x/net/http/httpguts
+# golang.org/x/sys v0.0.0-20190422165155-953cdadca894
+golang.org/x/sys/unix
+# golang.org/x/text v0.3.0
+golang.org/x/text/secure/bidirule
+golang.org/x/text/unicode/bidi
+golang.org/x/text/unicode/norm
+golang.org/x/text/transform
+# google.golang.org/genproto v0.0.0-20180817151627-c66870c02cf8
+google.golang.org/genproto/googleapis/rpc/status
+# google.golang.org/grpc v1.20.1
+google.golang.org/grpc
+google.golang.org/grpc/codes
+google.golang.org/grpc/credentials
+google.golang.org/grpc/grpclog
+google.golang.org/grpc/health/grpc_health_v1
+google.golang.org/grpc/keepalive
+google.golang.org/grpc/metadata
+google.golang.org/grpc/status
+google.golang.org/grpc/balancer
+google.golang.org/grpc/balancer/roundrobin
+google.golang.org/grpc/connectivity
+google.golang.org/grpc/encoding
+google.golang.org/grpc/encoding/proto
+google.golang.org/grpc/internal
+google.golang.org/grpc/internal/backoff
+google.golang.org/grpc/internal/balancerload
+google.golang.org/grpc/internal/binarylog
+google.golang.org/grpc/internal/channelz
+google.golang.org/grpc/internal/envconfig
+google.golang.org/grpc/internal/grpcrand
+google.golang.org/grpc/internal/grpcsync
+google.golang.org/grpc/internal/transport
+google.golang.org/grpc/naming
+google.golang.org/grpc/peer
+google.golang.org/grpc/resolver
+google.golang.org/grpc/resolver/dns
+google.golang.org/grpc/resolver/passthrough
+google.golang.org/grpc/stats
+google.golang.org/grpc/tap
+google.golang.org/grpc/credentials/internal
+google.golang.org/grpc/balancer/base
+google.golang.org/grpc/binarylog/grpc_binarylog_v1
+google.golang.org/grpc/internal/syscall
+# gopkg.in/yaml.v2 v2.2.2
+gopkg.in/yaml.v2

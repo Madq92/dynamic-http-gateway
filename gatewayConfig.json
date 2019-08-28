@@ -1,0 +1,8 @@
+{
+  "appName": "testAppName",
+  "etcdPrefix": "/dynamicHttpGateway",
+  "etcdUserName": "userName,",
+  "etcdPassword": "password",
+  "etcdEndpoints": [
+  ]
+}
