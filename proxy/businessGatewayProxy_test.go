@@ -1,9 +1,11 @@
 package proxy
 
 import (
+	"io/ioutil"
 	"net/http"
 	"net/textproto"
 	"net/url"
+	"strings"
 	"testing"
 )
 
@@ -349,6 +351,49 @@ func Test_queryFun(t *testing.T) {
 			got, err := queryFun(tt.args.param...)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("queryFun() error = %v, wantErr %v", err, tt.wantErr)
+				return
+			}
+			if !tt.wantErr {
+				re := got(tt.req)
+				if re != tt.want {
+					t.Errorf("queryFun() = %v, want %v", re, tt.want)
+				}
+			}
+		})
+	}
+}
+
+func Test_bodyFun(t *testing.T) {
+	type args struct {
+		param []string
+	}
+
+	//var body io.ReadCloser
+	//bf.WriteTo(body)
+
+	tests := []struct {
+		name    string
+		args    args
+		want    bool
+		req     *http.Request
+		wantErr bool
+	}{
+		{
+			name:    "bodyFun ok test",
+			args:    args{[]string{"key", "value"}},
+			want:    true,
+			wantErr: false,
+			req: &http.Request{
+				Body:   ioutil.NopCloser(strings.NewReader(`{"key":"value"}`)),
+				Header: http.Header{"Content-Type": {`application/json`}},
+			},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got, err := bodyFun(tt.args.param...)
+			if (err != nil) != tt.wantErr {
+				t.Errorf("bodyFun() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 			if !tt.wantErr {

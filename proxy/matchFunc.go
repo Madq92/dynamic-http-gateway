@@ -1,8 +1,10 @@
 package proxy
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/labstack/echo"
 	"net/http"
 	"regexp"
 	"strings"
@@ -153,5 +155,34 @@ func queryFun(param ...string) (func(req *http.Request) bool, error) {
 			}
 		}
 		return true
+	}, nil
+}
+
+func bodyFun(param ...string) (func(req *http.Request) bool, error) {
+	length, err := checkPairs(param...)
+	if err != nil {
+		return nil, err
+	}
+
+	bodyParam := make(map[string]string, length/2)
+	for i := 0; i < length; i += 2 {
+		bodyParam[param[i]] = param[i+1]
+	}
+	return func(req *http.Request) bool {
+		ctype := req.Header.Get(echo.HeaderContentType)
+		if strings.HasPrefix(ctype, echo.MIMEApplicationJSON) {
+			bodyMap := make(map[string]string)
+			if err := json.NewDecoder(req.Body).Decode(&bodyMap); err != nil {
+				return false
+			}
+			for k := range bodyParam {
+				if bodyMap[k] != bodyParam[k] {
+					return false
+				}
+			}
+			return true
+
+		}
+		return false
 	}, nil
 }
