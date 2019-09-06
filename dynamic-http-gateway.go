@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"crypto/tls"
 	"dynamic-http-gateway/gateway"
 	"log"
 	"os"
@@ -18,12 +17,6 @@ func main() {
 	//start admin api
 	a := gateway.NewAdmin(b)
 	a.Start(":8081")
-
-	certificate, err := tls.LoadX509KeyPair("certs/client.pem", "certs/client.key")
-	if err!= nil {
-
-	}
-	certificate.
 
 	sigs := make(chan os.Signal)
 	done := make(chan bool)
