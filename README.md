@@ -59,3 +59,9 @@ PathPrefix | path前缀匹配 | name=PathPrefix,param=["/pathPrefix"]
 Method | 方法匹配 | name=Method,param=["GET","POST"]
 Query | query参数 | name=Query,param=["key","value","key2","value2"]
 Body | body参数 | name=Body,param=["key","value","key2","value2"]
+
+#### TODO list
+
+路由规则信息存ETCD
+
+支持水平扩容
